@@ -6,8 +6,9 @@ function ApplicationWindow() {
 	//create component instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
-		navBarHidden:true,
-		exitOnClose:true
+		navBarHidden:false,
+		exitOnClose:true,
+		actionBar:true
 	});
 		
 	//construct UI

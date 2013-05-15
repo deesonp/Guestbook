@@ -7,6 +7,8 @@ var main = Ti.UI.createWindow({
 	height:Ti.Platform.displayCaps.platformHeight,
 	width:Ti.Platform.displayCaps.platformWidth,
 	fullscreen:false,
-	navBarHidden:false
+	navBarHidden:true,
+	modal:true
 });
+
 main.open();

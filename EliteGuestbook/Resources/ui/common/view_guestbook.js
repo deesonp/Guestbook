@@ -8,7 +8,7 @@ var viewGuestBookLabel = Ti.UI.createLabel({
 	font : {
 		fontFamily : 'Verdana',
 		fontWeight : 'bold',
-		fontSize : 16
+		fontSize : 24
 	},
 	color : '#fff',
 	top : 10
@@ -20,7 +20,9 @@ win.add(viewGuestBookLabel);
 var db = Ti.Database.open('guestBookDB');
 
 // create blank table view
-var tableview = Titanium.UI.createTableView({});
+var tableview = Titanium.UI.createTableView({
+	
+});
 win.add(tableview);
  
 // create an empty array
@@ -33,7 +35,7 @@ var rows = db.execute('SELECT firstName, lastName FROM guests');
 while (rows.isValidRow())
 {
    // add each item to the data array and set the table row title
-   data.push({title:rows.field(0)+ ' ' +rows.field(1),hasChild:true});
+   data.push({title:rows.field(0)+ ' ' +rows.field(1),hasChild:true,font:{fontSize:24}});
    rows.next();
 }
  
